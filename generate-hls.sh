@@ -1,7 +1,12 @@
+###
+Good docs:
+http://underpop.online.fr/f/ffmpeg/help/options-51.htm.gz
+###
+
 rm -rf hls
 mkdir hls
-#ffmpeg -re -i test5.mkv -map 0:v -map 0:a -f hls ./hls/master.m3u8
 
+echo "Generating HLS manifest"
 ffmpeg -i test5.mkv \
  -master_pl_name master.m3u8 \
  -g 30 \
